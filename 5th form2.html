@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        /* Background styling */
+        body {
+           background-image: url(https://tse1.mm.bing.net/th?id=OIP.Av6DSD2LuOiUQzNxW_HdiAHaEK&pid=Api&P=0&h=180);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Form container styling */
+        .form-container {
+          
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            max-width: 90%;
+            color: white;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px dashed red;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container input[type="date"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"],
+        .form-container input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #eb1135; /* Button color */
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .form-container input[type="submit"]:hover,
+        .form-container input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Optional: Style for Sign In button */
+        .form-container .sign-in-btn {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            margin-top: 5px;
+        }
+
+        .form-container .sign-in-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form action="/submit-form" method="post">
+            <!-- First and Last Name -->
+            <div class="form-group">
+                <input type="text" name="first_name" placeholder="Enter First Name" required>
+                <input type="text" name="last_name" placeholder="Enter Last Name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Enter Email" required>
+            </div>
+
+            <!-- Password and Confirm Password -->
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Enter New Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm New Password" required>
+            </div>
+
+            <!-- Age and Date of Birth -->
+            <div class="form-group">
+                <input type="text" name="age" placeholder="Age" required>
+                <input type="date" name="dob" placeholder="Date of Birth" required>
+            </div>
+
+            <!-- Province and City -->
+            <div class="form-group">
+                <select name="province" required>
+                    <option value="" disabled selected>Select Province</option>
+                    <option value="province1">Punjab</option>
+                    <option value="province2">KPK</option>
+                    <option value="province3">Sindh</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <select name="city" required>
+                    <option value="" disabled selected>Select City</option>
+                    <option value="lhr">Lahore</option>
+                    <option value="kr">Karachi</option>
+                    <option value="Ml">Multan</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <!-- Country and Upload Picture -->
+            <div class="form-group">
+                <select name="country" required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option value="country1">Pakistan</option>
+                    <option value="country2">India</option>
+                    <option value="country">England</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <input type="file" name="upload_picture" required>
+            </div>
+           
+
+            <!-- Register and Sign In Buttons -->
+            <input type="submit" value="Register">
+            <input type="button" class="sign-in-btn" value="Sign In">
+        </form>
+    </div>
+</body>
+</html>
