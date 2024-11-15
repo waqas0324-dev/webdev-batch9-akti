@@ -1,0 +1,290 @@
+
+<!-- saved from url=(0045)http://127.0.0.1:5500/week3/akti4%20form.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>sign up form</title>
+<style>
+    body{
+        background-image: url(waso.jpg);
+        background-position: inherit;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        
+    }
+    .container{
+        background-image: url(https://tse2.mm.bing.net/th?id=OIP.IWySJBZXGMJZ__kFhlpO1gHaEK&pid=Api&P=0&h=180);
+        border: none;
+        width: 40%;
+        padding: 10px 30px;
+    }
+    .signup{
+        text-align: center;
+        font-size: 30px;
+        font-weight:700px ;
+    }
+    .border{
+        border-top: 2px solid red;
+        padding: 15px 0px;
+        
+    }
+    .set-flex{
+        display: flex;
+        
+    }
+    .w-1{
+        width: 50%;
+    }
+    .w-2{
+        width: 50%;
+    }
+    input{
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        height: 35px;
+       padding: 20px ;
+       margin: 10px 0px;
+       
+    }
+    .input-1{
+        margin-right: 20px;
+    }
+     .input-2{
+     margin-left: 20px;
+     }
+     select{
+        border-radius: 6px;
+        border: none;
+        height: 35px;
+        width: 100%;
+        margin: 8px 0px;
+        color:rgb(0, 0, 0);
+        
+        
+     }
+        .button  input{
+        
+     color: rgb(14, 197, 44);
+     font-size: 18px;
+     border-radius: 7px;
+    
+     
+     
+     }
+     .button input:hover{
+        background-color: gray;
+        color: white;
+     }
+      
+     
+     
+</style></head>
+
+<body>
+    <div class="container">
+        <div class="signup">Sign Up Form</div>
+        <div class="border"></div>
+        <form action="http://127.0.0.1:5500/week3/akti4%20form.html">
+            <div class="set-flex">
+                <div class="w-1">
+                    <div>
+                        <label for="">First Name</label>
+                    </div>
+                    <div class="input-1">
+                        <input type="text" name="fname" id="" placeholder="first name">
+                    </div>
+
+                </div>
+                <div class="w-2 input-2">
+                   <div>
+                    <label for="lname">Last Name</label>
+                   </div>
+                   <div>
+                    <input type="text" name="lname" id="" placeholder="Last name">
+                   </div>
+
+                </div>
+
+            </div>
+            <div>
+                <div class="email">
+                    <label for="email">Email</label>
+                </div>
+                <div>
+                    <input type="text" name="email" id="" placeholder="Enter Email">
+                </div>
+            </div>
+            
+            <div class="set-flex">
+                <div class="w-1">
+                    <div>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="input-1">
+                        <input type="text" name="fname" id="" placeholder="Enter New password">
+                    </div>
+
+                </div>
+                <div class="w-2 input-2">
+                   <div>
+                    <label for="lname">Confirm password</label>
+                   </div>
+                   <div>
+                    <input type="text" name="lname" id="" placeholder="Confirm new password">
+                   </div>
+
+                </div>
+
+            </div>
+           
+            <div class="set-flex">
+                <div class="w-1">
+                    <div>
+                        <label for="">Age</label>
+                    </div>
+                    <div class="input-1">
+                        <input type="text" name="fname" id="" placeholder="age">
+                    </div>
+
+                </div>
+                <div class="w-2 input-2">
+                   <div>
+                    <label for="lname">Date of Birth</label>
+                   </div>
+                   <div>
+                    <input type="date" name="lname" id="">
+                   </div>
+
+                </div>
+
+            </div>
+            <div class="set-flex">
+                <div class="w-1">
+                    <div><label for="">Province</label>
+                    </div>
+                    <div class="input-1">
+                        <select name="" id="">
+                            <option value="pu" disabled="" selected="">select province</option>
+                            <option value="pu">KPK</option>
+                            <option value="Sindh">Sindh</option>
+                            <option value="pu">Punjab</option>
+
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            
+            
+                <div class="w-1">
+                    <div><label for="city">City</label>
+                    </div>
+                    <div class="input-2">
+                        <select name="" id="">
+                            <option value="lhr" disabled="" selected="">select city</option>
+                            <option value="lhr">Lahore</option>
+                            <option value="kr">Karachi</option>
+
+                            <option value="ml">Multan</option>
+
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="set-flex">
+                <div class="w-1">
+                    <div><label for="">Province</label>
+                    </div>
+                    <div class="input-1">
+                        <select name="" id="">
+                            <option value="pu" disabled="" selected="">select Country</option>
+                           
+                            <option value="ind">India</option>
+                            <option value="pak">Pakistan</option>
+
+                            <option value="Eng">England</option>
+
+
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="w-2 input-2">
+                    <div><label for="">Upload picture</label>
+                    </div>
+                    <select name="" id="">
+                        <option value="pu" disabled="" selected="">select Picture</option>
+                        <option value="pk">Pic 1</option>
+                        <option value="ind">pic 2</option>
+
+                        <option value="Eng">pic 3</option>
+
+
+                    </select>
+
+                </div>
+
+            </div>
+           
+                <div class="button">
+                    <input type="submit" value="Register">
+                    <input type="button" value="sign in">
+                       
+                </div>
+                    
+                </form></div>
+            
+        
+
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
