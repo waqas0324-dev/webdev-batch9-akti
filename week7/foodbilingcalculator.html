@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const price ={
+            burger :140,
+            shwarma:200,
+            fries: 120,
+            pizza :1000,
+           sandwich:200,
+           cold_drink: 120,
+        };
+        const order  = [
+
+            { item: "burger", quantity: 3, unit_price: 140 },
+            {  item: "shwarma", quantity: 2, unit_price:200},
+            {  item: "pizza", quantity: 1, unit_price:1000}
+           
+        ]
+         billAmount = 0;
+      for (let index = 0; index < order.length; index++) {
+        const element = order[index];
+        const indiv_bill = element["quantity"] * element["unit_price"];
+        billAmount = billAmount + indiv_bill;
+      }
+        console.log("billAmount: ", billAmount);
+
+        // gst ///// 
+      gst = 18 
+        PaymentMethod = +prompt(" would you like to pay by card or cash ?\n1.card\n2.cash");
+        if (PaymentMethod == 1){
+            gst = 0;
+
+        }
+        gstAmount = (billAmount*gst)/100
+        billAmount = billAmount + gstAmount;
+        console.log(" GST", gst);
+        console.log("billAmount: " , billAmount)
+         
+
+        /////////////////////////
+        // Discount /////////
+         //   billing amount > 1000  and less than 2000 ===> 5%
+      //   billing amount > 2000  and less than 5000 ===> 10%
+      //   billing amount > 5000   ===> 25%
+      discountPerc =0;
+      if ( billAmount>1000 && billAmount <= 2000)
+      {
+        discountPerc = 5;
+      }
+     else if ( billAmount>2000 && billAmount <= 5000)
+      {
+        discountPerc = 10;
+      }
+      discountAmount = ( billAmount*discountPerc)/100;
+      billAmount =billAmount-discountAmount;
+      console.log("Discount", discountPerc);
+      console.log("Discount Amount:  ", discountAmount);
+      console.log("billAmount: ", billAmount);
+    </script>
+    
+</body>
+</html>

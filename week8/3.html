@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           //Task
+      ////////////////////////////////
+      // filterBy Price
+      // filter by category [ "electronics", "men's clothing", "women's clothing"]
+      // Most Popular {rating > 3.5}
+      // Tax Calculation ---> tax Amount gst --> gst Amount
+    class Product {
+        constructor(price, rate, count, category) {
+            this.price = price;
+            this.rating = { rate: rate, count: count };
+            this.category = category;
+        }
+    }
+    
+    const products = [
+        new Product(12.99, 3.6, 145, "electronics"),
+        new Product(25.99, 4.2, 200, "men's clothing"),
+        new Product(18.50, 3.8, 120, "women's clothing"),
+        // Add more products here
+    ];
+    
+    // Filter by price
+    const filterByPrice = (products, maxPrice) => {
+        return products.filter(product => product.price <= maxPrice);
+    };
+    
+    // Filter by category
+    const filterByCategory = (products, categories) => {
+        return products.filter(product => categories.includes(product.category));
+    };
+    
+    // Filter by most popular (rating > 3.5)
+    const filterByPopularity = (products) => {
+        return products.filter(product => product.rating.rate > 3.5);
+    };
+    
+    // Calculate tax amount
+    const calculateTax = (price, taxRate) => {
+        return price * (taxRate / 100);
+    };
+    
+    // Example usage
+    const maxPrice = 30;
+    const categories = ["electronics", "men's clothing", "women's clothing"];
+    const taxRate = 10; // GST rate in percentage
+    
+    const filteredByPrice = filterByPrice(products, maxPrice);
+    const filteredByCategory = filterByCategory(filteredByPrice, categories);
+    const mostPopular = filterByPopularity(filteredByCategory);
+    
+    mostPopular.forEach(product => {
+        const taxAmount = calculateTax(product.price, taxRate);
+        console.log(`Product: ${product.category}, Price: ${product.price}, Tax Amount: ${taxAmount}`);
+    });
+    </script>
+</body>
+</html>

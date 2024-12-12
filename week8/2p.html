@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+      
+      const products = [
+          { price: 109, rating: { rate: 4.6, count: 445 }, category: "men's clothing" },
+    { price: 12.99, rating: { rate: 3.6, count: 145 }, category: "electronics" },
+    // Add more products here
+];
+
+// Filter by price
+const filterByPrice = (products, maxPrice) => {
+    return products.filter(product => product.price <= maxPrice);
+};
+
+// Filter by category
+const filterByCategory = (products, categories) => {
+    return products.filter(product => categories.includes(product.category));
+};
+
+// Filter by most popular (rating > 3.5)
+const filterByPopularity = (products) => {
+    return products.filter(product => product.rating.rate > 3.5);
+};
+
+// Calculate tax amount
+const calculateTax = (price, taxRate) => {
+    return price * (taxRate / 100);
+};
+
+// Example usage
+const maxPrice = 80;
+const categories = ["electronics", "men's clothing", "women's clothing"];
+const taxRate = 18; // GST rate in percentage
+
+const filteredByPrice = filterByPrice(products, maxPrice);
+const filteredByCategory = filterByCategory(filteredByPrice, categories);
+const mostPopular = filterByPopularity(filteredByCategory);
+
+mostPopular.forEach(product => {
+    const taxAmount = calculateTax(product.price, taxRate);
+    console.log(`Product: ${product.category}, Price: ${product.price}, Tax Amount: ${taxAmount}`);
+   
+    
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Balance = 12000
+      // 1. Cash Withdrawal ----> Amount-----> [ Amount < Balance ]  -----> Update Balance
+      // 2. Funds Transfer  ----> Please Select One of the banks ------> Account Number ----> transfer_amount < balance
+      // 3. Bill Payment   -----> ptcl, lesco, sngpl  ----> reference number/ customerId ------>  transfer_amount < balance
+      // 5. Exit
+
+
+
+      balance =15000;
+       iscontiune = true;
+       while( iscontiune){
+        Option = +prompt(" Please select an option \n1.  Cash Withdrawal \n2. Funds Transfer \n3.Exit");
+        switch (Option){
+            case '1':
+                console.log(" Cash Withdrawal");
+                WithdrawalAmount = +prompt ("please enter your withdrawal amount ");
+                if (WithdrawalAmount < balance){
+
+                    balance  = balance - WithdrawalAmount ;
+                    console.log(`WithdrawalAmount: ${WithdrawalAmount}`);
+                    console.log(`Balance: ${balance}`);
+                    console.log("transcation successful")
+                }
+                else{
+                    console.log("Transcation unsuccessful");
+                }
+                break;
+                case '2':
+                console.log("Funds Transfer");
+                bank = + prompt(" please select one bank ? \n1. punjab bank \n2. Meezan bank \n3.Faysal bank\n4.Habib bank");
+                account = +prompt(" enter your Account number");
+                transfer_amount  = ("enter amount to transfer:")
+                if ("transfer_amount > balance "){
+                    console.log(" transcation unsuccessfull")
+
+                }
+               
+
+                else{
+                    balance = balance - transfer_amount ;
+                    console.log("Transcation successful")
+                    console.log(`transfer_amount: ${transfer_amount}`);
+                    console.log(`Balance: ${balance}`);
+
+                }
+                break;
+                case '3':
+            const billType = prompt('Please select bill type (ptcl, lesco, sngpl):');
+            const referenceNumber = prompt('Enter reference number/customer ID:');
+            const billAmount = parseFloat(prompt('Enter bill amount:'));
+            if (billAmount < balance) {
+                balance -= billAmount;
+                console.log(`"Bill payment for ${billType} (Reference: ${referenceNumber}) successful. New balance: ${balance}"`);
+            } else {
+                console.log('"Insufficient balance."');
+            }
+            break;
+
+                
+                case 4:
+            console.log("Exit");
+            isContinue = false;
+            break;
+
+          default:
+            console.log("Incorrect Input");
+            break;
+
+        }
+       
+       }
+    </script>
+</body>
+</html>

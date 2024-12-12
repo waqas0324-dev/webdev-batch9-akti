@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        
+       
+      <script>
+    // Task
+    ////////////////////////////////
+    // filterBy Price
+    // filter by category [ "electronics", "men's clothing", "women's clothing"]
+    // Most Popular {rating > 3.5}
+    // Tax Calculation ---> tax Amount gst --> gst Amount
+
+    class Product {
+        constructor(price, rate, count, category) {
+            this.price = price;
+            this.rating = { rate: rate, count: count };
+            this.category = category;
+        }
+    }
+
+    const products = [
+        new Product(25.99, 4.2, 200, "electronics"),
+        new Product(29.95, 2.9, 145, "women's clothing"),
+        new Product(39.99, 3.9, 120, "men's clothing"),
+    ];
+
+    const filterByPrice = (products, maxPrice) => {
+        return products.filter(product => product.price <= maxPrice);
+    };
+
+    const filterByCategory = (products, categories) => {
+        return products.filter(product => categories.includes(product.category));
+    };
+
+    const filterByPopularity = (products) => {
+        return products.filter(product => product.rating.rate > 3.5);
+    };
+
+    // Calculate tax amount
+    const calculateTax = (price, taxRate) => {
+        return price * (taxRate / 100);
+    };
+
+    const maxPrice = 30;
+    const categories = ["electronics", "men's clothing", "women's clothing"];
+    const taxRate = 10; // GST rate in percentage
+
+    const filteredByPrice = filterByPrice(products, maxPrice);
+    const filteredByCategory = filterByCategory(filteredByPrice, categories);
+    const mostPopular = filterByPopularity(filteredByCategory);
+
+    mostPopular.forEach(product => {
+        const taxAmount = calculateTax(product.price, taxRate);
+        console.log(`Product: ${product.category}, Price: ${product.price}, Tax Amount: ${taxAmount}`);
+    });
+</script>
+
+
+   
+</body>
+</html>

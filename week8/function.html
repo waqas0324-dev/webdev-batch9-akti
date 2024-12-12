@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getInfo(){
+           return " hay akti developer how are you";
+        }
+        let gfg = getInfo ()
+        console.log(gfg);
+        // two  type of function
+        // Named fuction means added a name 
+        function add ( a,b ){
+            return  a*b;
+            return a+b;
+        }
+        console.log(`${add(5,4)} , ${add(2,4)}`)
+     // Anonymous function: 
+     let get = function (a,b){
+        return a/b;
+
+     }
+     console.log(get(5, 2));
+     function msg (firstname){
+        function hy (){
+           console.log ("Hy  " + firstname)
+        }
+        return hy()
+     }
+     msg ("WASO");
+     // Immediately invoked function expression:
+     let value = (function() {
+        return "welcome in webdevelopement course waqas:";
+     })();
+     console.log (value);
+     
+        </script>
+        
+       
+</body>
+</html>

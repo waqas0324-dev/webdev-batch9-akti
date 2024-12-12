@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+      // function method
+       function product (a,b){
+         return a*b;
+       };
+       console.log(product(6,10));
+       function language (){
+        let first = 'HTML',
+        second = 'CSS',
+        third ='JavaScript'
+        return {
+            first, 
+            second,
+            third,
+
+        }
+       };
+       let { first, second, third,}= language()
+       console.log (` ${first }, ${ second} , ${third} `);
+       //  Array method
+        let x =5
+        for ( let i=1 ; i<=10; i++){
+            console.log(x*i);
+           
+        }
+        //function method
+         function WelcomeMsg (name){
+          return ("hello " + name +  " welcome to my team.");
+         }
+         let nameVal = "waqas"
+         console.log (WelcomeMsg(nameVal));
+         console.log(Array.isArray("function"));
+         
+
+          function LoveMsg( name) {
+            return ("My name is  " +name);
+          }
+          let nameVal2 = "waso"
+            console.log (LoveMsg(nameVal2));
+            // Anonymus function
+            let add =function(a,b){
+              return (a*b );
+            }
+            console.log(add(10 ,7));
+            console.log (typeof add)
+            const array = [2, 3, 4, 3, 4, 5];  
+// Use the map() method to create an array of elements to add to the set  
+const elementsToAdd = array.map(element => element);  
+// Create a new set and use the add() method to add each element to the set  
+const set = new Set();  
+elementsToAdd.forEach(element => set.add(element));  
+// Log the set to the console  
+console.log("The converted array to set is", set);  
+
+let arr = [1, 2, 3];  
+let obj = { name: "John", age: 30 };  
+  
+console.log(Array.isArray(arr)); // Output: true  
+console.log(Array.isArray(obj)); // Output: false 
+// bye reduce method 
+num = [1, 2,3 ,6,7];
+sum = num.reduce((accmulator , currentvalue)=> accmulator+currentvalue,0) 
+console.log(sum);
+      mixed =[2 ,4,5, "waqas",6,8]  
+      sum = mixed.reduce((accmulator ,currentvalue )=>accmulator+currentvalue ,0)    ;
+      console.log(sum);
+      // bye variable method 
+       var data = 200;
+       function a (){
+        console.log(data);
+
+       }
+       function b(){
+        alert(data)
+       }
+       a();
+       b();
+       function msg(){
+        console.log("Hello akti my name is waqas ")
+       }
+        
+       function msg(){  
+alert("hello! this is message");  
+}  
+     </script>
+     <input type=button onclick=msg() value="call function"/>  
+     
+</body>
+</html>
